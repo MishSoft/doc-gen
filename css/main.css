@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+:root {
+  /* background colors */
+  --background: #0F172A;
+  --header-bg: #171E31;
+  --item-bg: #252C3F;
+  --header-button-bg: #FFFFFF;
+  --item-button-bg: #2563EA;
+  --hero-demo-btn-bg: #1D283A;
+
+  /* text colors */
+  --text-primary-color: #FFFFFF;
+  --header-text-primary: #8890A3;
+  --header-button-text: #20222F;
+
+  --hero-text-primary: #2563EA;
+  --hero-text-secondary: #8F9AAC;
+
+  /* effects */
+  --hero-image-shadow-color: #2563EA33;
+}
+
+
+@layer components {
+  .logo {
+    @apply font-bold text-2xl text-text-primary-color ;
+  }
+
+  .nav-link {
+    @apply font-semibold text-header-text-primary text-md;
+  }
+
+  .item-button {
+    @apply bg-item-button-bg rounded-xl py-3 text-text-primary-color
+  }
+
+  .item {
+    @apply bg-item-bg rounded-xl p-8 flex flex-col gap-5
+  }
+}
