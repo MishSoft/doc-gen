@@ -5,13 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document Generate</title>
   <link rel="stylesheet" href="css/output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
   <script src="script/main.js" defer></script>
 </head>
 <body>
-  <header class="bg-red-400">
-    <button class="item-button">
-      Click
+  <header class="bg-header-bg  flex items-center justify-between default-container">
+    <!-- logo -->
+    <a href="/" class="flex items-center gap-2">
+      <div class="bg-logo-bg p-2 rounded-xl">
+        <img src="assets/logo/logo.svg" alt="DocGen Logo Image">
+      </div>
+      <h1 class="logo ">DocGen</h1>
+    </a>
+  
+    <!-- Nav bar -->
+    <nav class="hidden xl:block">
+      <ul class="flex  items-center gap-10">
+        <li><a class="nav-link " href="/">მთავარი</a></li>
+        <li><a class="nav-link" href="/">როგორ მუშაობს</a></li>
+        <li class="flex items-center gap-3 relative group">
+          <a class="nav-link" href="/">დოკუმენტები</a>
+          <img class="w-3 h-3" src="assets/icons/down-arrow.svg" alt="">
+          <ul
+            class="absolute z-50 left-0 top-full py-6 px-4 w-[323px] py-4 flex flex-col gap-3 bg-drop-down-bg shadow-lg rounded-lg opacity-0  group-hover:opacity-100 transition-opacity duration-300 invisible group-hover:visible">
+            <li><a class="nav-link" href="/">შრომითი ხელშეკრულება</a></li>
+            <li><a class="nav-link" href="/">მინდობილობა</a></li>
+            <li><a class="nav-link" href="/">ლიზინგის ხელშეკრულება</a></li>
+            <li><a class="nav-link" href="/">მიღება-ჩაბარების აქტი</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link" href="/">ფასები</a></li>
+        <li><a class="nav-link" href="/">ჩვენ შესახებ</a></li>
+      </ul>
+    </nav>
+  
+    <button class="px-8 py-3 rounded-xl font-bold bg-header-button-bg">
+      დაწყება
     </button>
   </header>
+  <main class="w-full min-h-screen default-container">
+    <div class="flex justify-between items-start">
+      <section class="max-w-[784px]  flex flex-col gap-5 w-full">
+        <h2 class="text-[50px] leading-[151%] font-semibold text-text-primary-color">
+          დოკუმენტების <h3 class="text-[50px] text-start text-hero-text-primary font-semibold">სამუშაო პროცესის
+            ავტომატიზაცია</h3>
+        </h2>
+  
+        <p class="text-[15px] max-w-[587px] w-full  text-hero-text-secondary">
+          პროფესიონალური PDF-ების, კონტრაქტებისა და ანგარიშების შექმნა წამებში AI ტექნოლოგიის დახმარებით. მინიმალური
+          ძალისხმევა,
+          მაქსიმალური შედეგი.
+        </p>
+  
+        <div class="flex items-center gap-3 my-5">
+          <button class="px-8 py-3 rounded-xl font-bold bg-item-button-bg text-text-primary-color">
+            ახლავე დაწყება
+          </button>
+          <button class="px-8 py-3 rounded-xl font-bold bg-hero-demo-btn-bg text-text-primary-color">
+            Demo-ს ნახვა
+          </button>
+        </div>
+      </section>
+      <section class="shadow-2xl shadow-hero-image-shadow-color max-w-[600px] w-full overflow-hidden relative rounded-xl">
+        <img src="assets/image/hero-image.png" alt="" class=" w-full object-cover">
+      </section>
+    </div>
+  </main>
 </body>
 </html>

@@ -1,7 +1,7 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 :root {
   /* background colors */
@@ -11,6 +11,8 @@
   --header-button-bg: #FFFFFF;
   --item-button-bg: #2563EA;
   --hero-demo-btn-bg: #1D283A;
+  --logo-bg: #2662E6;
+  --drop-down-bg: #171F36;
 
   /* text colors */
   --text-primary-color: #FFFFFF;
@@ -24,14 +26,38 @@
   --hero-image-shadow-color: #2563EA33;
 }
 
+@font-face {
+  font-family: 'inter';
+  src: url('../assets/font/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'inter';
+  src: url('../assets/font/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+body {
+  background-color: var(--background);
+  font-family: 'inter', sans-serif;
+}
+
 
 @layer components {
+
+  .default-container {
+    @apply py-4 px-10
+  }
+
   .logo {
     @apply font-bold text-2xl text-text-primary-color ;
   }
 
   .nav-link {
-    @apply font-semibold text-header-text-primary text-md;
+    @apply font-semibold text-header-text-primary text-lg ;
   }
 
   .item-button {
